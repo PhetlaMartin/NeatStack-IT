@@ -249,7 +249,7 @@ section h2 {
   font-size: 32px;
   margin-bottom: 20px;
   text-align: center;
-  color: #448F24;
+  color: #0950ba;
 }
 
 /* WHO */
@@ -983,7 +983,7 @@ section h2 {
 }
 
 .top-bar-content i {
-  color: #3ddc97;
+  color: #0950ba;
 }
 
 .top-bar-title {
@@ -1028,6 +1028,7 @@ body.has-top-bar .navbar {
 /* Vision section */
 .about-vision {
   background: #f9fbff;
+  color: #0950ba;
   padding: 90px 10%;
 }
 
