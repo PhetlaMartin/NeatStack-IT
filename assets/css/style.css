@@ -75,13 +75,13 @@ p {
 /* NAVBAR */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 45px;
   left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 40px;
+  padding: 0px 40px;
 
   /* Frosted glass effect */
   background: rgba(255, 255, 255, 0.55); /* lighter transparency for real glass feel */
@@ -957,12 +957,185 @@ section h2 {
   z-index: 1;
 }
 
+
+/* ================= ABOUT PAGE STYLES ================= */
+
+/* Slim top info bar above navbar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 37, 64, 0.95);
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 12px 0;
+  z-index: 1100;
+}
+
+.top-bar-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.top-bar-content i {
+  color: #3ddc97;
+}
+
+.top-bar-title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Push navbar down when top bar exists */
+body.has-top-bar .navbar {
+  top: 36px;
+}
+
+/* About Hero */
+.about-hero {
+  background: url("../images/hero-bg1.jpg") center/cover no-repeat;
+  min-height: 80vh;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+}
+
+/* Story section */
+.about-story {
+  background: #ffffff;
+  padding: 90px 10%;
+}
+
+.about-story h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-story p {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 1.05rem;
+  color: #5f6f85;
+  line-height: 1.8;
+}
+
+/* Vision section */
+.about-vision {
+  background: #f9fbff;
+  padding: 90px 10%;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.vision-card {
+  background: #ffffff;
+  border: 1px solid #e4ebf5;
+  border-radius: 18px;
+  padding: 35px 28px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.vision-card i {
+  font-size: 1.6rem;
+  color: #0950ba;
+  margin-bottom: 15px;
+}
+
+.vision-card h3 {
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+.vision-card p {
+  color: #5f6f85;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(9, 80, 186, 0.18);
+  border-color: #0950ba;
+}
+
+/* ================= ABOUT CTA ================= */
+.about-cta {
+  background: linear-gradient(135deg, #0950ba, #0a2540);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow overlay */
+.about-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.about-cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.about-cta p {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: #e4ebf7;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* CTA Button Enhancement */
+.about-cta .btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a2540;
+  background: #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.about-cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+
 /* === MOBILE RESPONSIVE (max-width: 768px) === */
 @media (max-width: 768px) {
 
   /* Navbar */
   .navbar {
-    padding: 14px 22px;
+    padding: 0px 25px;
     flex-direction: column;
     gap: 12px;
   }
